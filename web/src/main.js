@@ -2,12 +2,12 @@ $(function() {
    
    console.log('dong stuff');
    
-   $.getJSON('src/data.json', function loaded_data(data) {
-      console.log($.parseJSON(data));
+   $.getJSON('src/data.json', function (data) {
+      console.log(data);
       
       //fill_description(data);      
       fill_discography(data);
-   }).done(function() {console.log('efefs');});
+   });
 });
 
 
