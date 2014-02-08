@@ -4,11 +4,16 @@ $(function() {
    $.getJSON('src/data.json', function (data) {
       if (DEV) { console.log(data); }
       fill_tagline(data);
-      //fill_description(data);      
+      fill_description(data);      
       fill_discography(data);
    });
 });
 
+function fill_description(data) {
+   $('#description p').text(data.description);
+      
+   if (DEV) { console.log('description set'); }
+}
 
 function fill_tagline(data) {
    $('#tagline').text(data.taglines[
@@ -38,4 +43,5 @@ function fill_discography(data) {
                   $('<th />').text('Track name')
          ))).append(tbody));  
    }   
+   if (DEV) { console.log('discography set'); }
 }
