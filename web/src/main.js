@@ -1,6 +1,6 @@
 $(function() {
    
-   jQuery.getJSON('data.json', function loaded_data(data) {
+   jQuery.getJSON('src/data.json', function loaded_data(data) {
       //fill_description(data);      
       fill_discography(data);
    });
