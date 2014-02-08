@@ -1,0 +1,17 @@
+{
+
+   'title' : 'Binary Grindstone',
+   'albums' : [
+      {
+         'title' : '00000001',
+         'tracks' : [
+            'Helicopter Paranoia',
+            'No Trees at Sea',
+            '5am Raid',
+            'Outlawed electrons',
+            'Cameron's Legacy',
+            'Narcissism Pandemic 2k14'            
+         ]        
+      }
+   ]
+}
