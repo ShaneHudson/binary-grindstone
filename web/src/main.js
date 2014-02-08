@@ -36,6 +36,7 @@ function fill_discography(data) {
       }
       
       $('#discography').append(
+         $('<h2 />').text(data.albums[i].title)).append
          $('<table />').append(
             $('<thead />').append(
                $('<tr />').append(
