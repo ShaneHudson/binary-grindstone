@@ -9,8 +9,7 @@ $(function() {
 
 
 function fill_discography(data) {
-   
-
+   console.log(data);
 
    for (var i = 0; i < data.albums.length; i++) {
       var tbody = $('<tbody />')
