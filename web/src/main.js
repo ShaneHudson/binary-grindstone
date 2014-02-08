@@ -33,6 +33,6 @@ function fill_discography(data) {
                $('<tr />').append(
                   $('<th />').text('Track number'),
                   $('<th />').text('Track name')
-         )).append(tbody)));  
+         ))).append(tbody));  
    }   
 }
