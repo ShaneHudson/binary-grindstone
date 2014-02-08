@@ -9,6 +9,9 @@ $(function() {
 
 
 function fill_discography(data) {
+   
+
+
    for (var i = 0; i < data.albums.length; i++) {
       var tbody = $('<tbody />')
       
@@ -19,10 +22,11 @@ function fill_discography(data) {
          ))      
       }
       
-      $('<table />').append(
-         $('<thead />').append(
-            $('<tr />').append(
-               $('<th />').text('Track name')
-      )).append(tbody));  
+      $('#discography').append(
+         $('<table />').append(
+            $('<thead />').append(
+               $('<tr />').append(
+                  $('<th />').text('Track name')
+         )).append(tbody)));  
    }   
 }
