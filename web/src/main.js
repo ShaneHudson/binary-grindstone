@@ -1,9 +1,11 @@
+var DEV = false;
+
 $(function() {
-   
-   console.log('dong stuff');
-   
+
+   if (DEV) { console.log(); }
+
    $.getJSON('src/data.json', function (data) {
-      console.log(data);
+      if (DEV) { console.log(data); }
       
       //fill_description(data);      
       fill_discography(data);
@@ -13,7 +15,6 @@ $(function() {
 
 
 function fill_discography(data) {
-   console.log(data);
 
    for (var i = 0; i < data.albums.length; i++) {
       var tbody = $('<tbody />')
@@ -21,6 +22,7 @@ function fill_discography(data) {
       for (var j = 0; j < data.albums[i].tracks.length; j++) {
          tbody.append(
             $('<tr />').append(
+               $('<td />').text(i),
                $('<td />').text(data.albums[i].tracks[j])
          ))      
       }
@@ -29,6 +31,7 @@ function fill_discography(data) {
          $('<table />').append(
             $('<thead />').append(
                $('<tr />').append(
+                  $('<th />').text('Track number'),
                   $('<th />').text('Track name')
          )).append(tbody)));  
    }   
