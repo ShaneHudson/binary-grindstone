@@ -1,4 +1,4 @@
-var DEV = false;
+var DEV = true;
 
 $(function() {
 
@@ -16,6 +16,8 @@ $(function() {
 function fill_tagline(data) {
    $('#tagline').text(data.taglines[
       Math.floor(Math.random() * data.taglines.length)]);
+      
+   if (DEV) { console.log('tagline set'); }
 }
 
 function fill_discography(data) {

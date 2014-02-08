@@ -1,5 +1,5 @@
 @font-face {
-    font-family : '04b-19';
+   font-family : '04b-19';
 	src : url('04b-19.ttf');
 }
 
@@ -7,9 +7,10 @@ html {
    height : 100%;	
 
    background : #cccccc;
-   background: linear-gradient(to bottom, 
+   background: linear-gradient(
+      to bottom, 
       #555555 0%, 
-	  #ffffff 100%); 
+      #ffffff 100%); 
 }
 
 body{
@@ -67,8 +68,7 @@ table {
 }
 
 table th {
-   border-bottom : 3px solid #999999;	
-	
+   border-bottom : 3px solid #999999;
 }
 table td {
 	text-align : center;
