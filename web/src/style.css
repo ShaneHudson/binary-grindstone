@@ -21,7 +21,7 @@ body{
 
 header {
    background : #ffffff;
-    
+   box-shadow: 0 1px 20px 2px #333333;
 }
 header h1 {
    text-align : center;
@@ -36,22 +36,45 @@ header span.tagline {
    text-align : center;	
 }
 
+
+/* reoccuring */
+
+
 article {
    background : #ffffff;
    margin-top : 20px;
-	
+   
+   padding : 25px 50px 25px 50px; 
+   
+   box-shadow: 0 1px 20px 2px #333333;
+
 }
+
+article h1 {
+   font-family : '04b-19';
+   font-size : 25pt;
+   line-height : 21px;
+   border-bottom : 3px solid #999999;	
+}
+
+
+/* bespoke */
 
 
 table {
-   width : 80%;
+   width : 100%;
    margin : 0 auto;
-   padding : 10px;
-   
 }
 
-thead {
-   border-bottom : 1px solid #55555;	
+table th {
+   border-bottom : 3px solid #999999;	
+	
+}
+table td {
+	text-align : center;
+}
 
+table td, th {
+	padding : 5px;
 }
 

@@ -6,13 +6,17 @@ $(function() {
 
    $.getJSON('src/data.json', function (data) {
       if (DEV) { console.log(data); }
-      
+      fill_tagline(data);
       //fill_description(data);      
       fill_discography(data);
    });
 });
 
 
+function fill_tagline(data) {
+   $('#tagline').text(data.taglines[
+      Math.floor(Math.random() * data.taglines.length)]);
+}
 
 function fill_discography(data) {
 
@@ -22,7 +26,7 @@ function fill_discography(data) {
       for (var j = 0; j < data.albums[i].tracks.length; j++) {
          tbody.append(
             $('<tr />').append(
-               $('<td />').text(i),
+               $('<td />').text(j),
                $('<td />').text(data.albums[i].tracks[j])
          ))      
       }
@@ -31,7 +35,7 @@ function fill_discography(data) {
          $('<table />').append(
             $('<thead />').append(
                $('<tr />').append(
-                  $('<th />').text('Track number'),
+                  $('<th />').text('#'),
                   $('<th />').text('Track name')
          ))).append(tbody));  
    }   
