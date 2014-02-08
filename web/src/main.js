@@ -1,9 +1,6 @@
 var DEV = true;
 
 $(function() {
-
-   if (DEV) { console.log(); }
-
    $.getJSON('src/data.json', function (data) {
       if (DEV) { console.log(data); }
       fill_tagline(data);
