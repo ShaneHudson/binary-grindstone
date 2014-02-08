@@ -10,7 +10,12 @@ $(function() {
 });
 
 
-
+function fill_tagline(data) {
+   $('#tagline').text(data.taglines[
+      Math.floor(Math.random() * data.taglines.length)]);
+      
+   if (DEV) { console.log('tagline set'); }
+}
 
 function fill_discography(data) {
 
@@ -22,7 +27,7 @@ function fill_discography(data) {
             $('<tr />').append(
                $('<td />').text(j),
                $('<td />').text(data.albums[i].tracks[j])
-         ))      
+         ));      
       }
       
       $('#discography').append(
