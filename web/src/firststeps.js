@@ -1,4 +1,17 @@
-var ctx = new webkitAudioContext();
+var ctx;
+
+try {
+   if (! window.AudioContext) {
+      if (window.webkitAudioContext) {
+         window.AudioContext = window.webkitAudioContext;
+      }
+   }
+
+   ctx = new AudioContext();
+}
+catch(e) {
+   console.log('Web Audio API is not supported in this browser');
+}
 
 var notes = [];
 
